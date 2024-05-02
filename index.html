@@ -8,26 +8,59 @@
 
     <body>
         <header>
-            <h1>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home">Início</a></li>
+                    <li class="nav-item"><a href="#aboutme">Sobre mim</a></li>
+                    <li class="nav-item"><a href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a href="#projects">Projetos</a></li>
+                    <li class="nav-item"><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <h1 id="home">
                 <span>Gustavo Mazurkiewitz</span> <br>
                 <span>Desenvolvedor front-end</span>
             </h1>
-
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#">Início</a></li>
-                    <li class="nav-item"><a href="#">Sobre mim</a></li>
-                    <li class="nav-item"><a href="#">Habilidades</a></li>
-                    <li class="nav-item"><a href="#">Projetos</a></li>
-                    <li class="nav-item"><a href="#">Contato</a></li>
-                </ul>
-            </nav>
         </header>
 
         <main>
             <section>
-                <h1>Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, perferendis veritatis. Animi reprehenderit nulla assumenda dolore, iusto iste et quasi suscipit aliquid illum incidunt fuga perferendis placeat, vero quas natus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, laborum! Omnis recusandae quas impedit eaque numquam sequi vel consequuntur itaque tempora, illo non debitis iusto, ipsum minima accusamus dicta alias.</p>
+                <h1 id="aboutme">Sobre mim</h1>
+                <p>Olá! Meu nome é Gustavo e moro em Três Coroas, RS. Sou um estudante do ensino médio tentando encontrar meu lugar no mercado da tecnologia. Venho estudando desenvolvimento front-end e busco oportunidades para poder expandir meus conhecimentos.</p>
+                <p>Gosto de encontrar maneiras criativas para resolver problemas e estou sempre disposto e empenhado em aprender coisas novas.</p>
+            </section>
+
+            <section>
+                <h1 id="skills">Habilidades</h1>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>HTML</span>  
+                        <img src="" alt="Ícone HTML5">
+                    </li>
+                    <li class="skill-item">
+                        <span>CSS</span>
+                        <img src="" alt="Ícone CSS3">
+                    </li>
+                    <li class="skill-item">
+                        <span>JavaScript</span>
+                        <img src="" alt="Ícone JavaScript">
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 id="projects">Projetos</h1>
+                <p>Em andamento</p>
+            </section>
+
+            <section>
+                <h1 id="contact">Contato</h1>
+                <nav class="contact-list">
+                    <li><a href="#" rel="external" title="WhatsApp"><img src="images/whatsapp.png" alt="WhatsApp"></a></li>
+                    <li><a href="https://www.linkedin.com/in/gustavo-mazurkiewitz-665058301/" rel="external" title="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a href="https://github.com/GustavoMaz" rel="external" title="GitHub"><img src="images/github.png" alt="GitHub"></a></li>
+                </nav>
             </section>
         </main>
 
