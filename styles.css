@@ -21,17 +21,23 @@ li {
 }
 
 .title-container {
-    margin-top: 4rem;
-    height: 50vh;
+    margin: 30vh 0;
+    position: relative;
+    top: 51px;
+    padding: 0 4rem;
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    padding-left: 4rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-title-dev {
     font-size: 0.75em;
     font-weight: 300;
+}
+
+.decorative-tag {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 button {
@@ -84,16 +90,15 @@ section h1 {
     text-align: center;
 }
 
-/*
-#aboutme {
-    visibility: hidden;
+.top-sections-container {
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
 }
-*/
 
 .aboutme-section {
-    padding: 0 4rem;
-    float: left;
-    width: 50%;
+    margin-right: 4rem;
+    max-width: 768px;
 }
 
 .skill-list {
