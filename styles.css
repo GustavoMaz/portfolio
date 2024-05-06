@@ -23,15 +23,15 @@ li {
     list-style-type: none;
 }
 
-/*
-img:hover {
-    transform: scale(1.05);
+.center {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
 }
-*/
 
 .page-container {
-    margin: 0 auto;
+    margin: 0 3vw;
     max-width: 1980px;
+    grid-column: 2;
 }
 
 header {
