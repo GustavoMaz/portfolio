@@ -72,6 +72,7 @@ button {
     border: 2px solid var(--primary-color);
     position: relative;
     z-index: 1;
+    margin-top: 2rem;
 }
 
 .contact-button::before {
@@ -98,10 +99,6 @@ button {
     right: 0;
 }
 
-.contact-button {
-    margin-top: 2rem;
-}
-
 #main-nav {
     position: fixed;
     top: 0;
@@ -124,6 +121,14 @@ button {
     white-space: nowrap;
     color: var(--background-color);
     text-decoration: none;
+    padding: 1rem;
+}
+
+.nav-item a:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: .3s;
 }
 
 section {
@@ -189,10 +194,41 @@ section h1 {
 }
 
 .contact-item:hover {
-    transform: scale(1.1);
     outline: 2px solid var(--primary-color);
     outline-offset: 4px;
-    transition: .3s;
+    transition: .2s;
+    /*animation: pulse 1s ease-in-out infinite;*/
+    animation: shrink .1s ease-out 1;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.9);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .contact-item img {
