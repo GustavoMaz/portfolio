@@ -20,9 +20,11 @@ li {
     list-style-type: none;
 }
 
+/*
 img:hover {
     transform: scale(1.05);
 }
+*/
 
 .page-container {
     margin: 0 3vw;
@@ -101,7 +103,7 @@ button {
     top: 0;
     width: 100vw;
     background-color: var(--primary-color);
-    z-index: 2;
+    z-index: 99;
 }
 
 .nav-list {
@@ -171,6 +173,28 @@ section h1 {
     margin: 5px;
     background-color: gray;
     text-align: center;
+}
+
+.contact-item {
+    background-color: var(--primary-color);
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+    outline: 4px solid var(--primary-color);
+    outline-offset: 4px;
+    transition: .3s;
+}
+
+.contact-item img {
+    width: 32px;
+    height: 32px;
+    margin: auto;
 }
 
 footer {
