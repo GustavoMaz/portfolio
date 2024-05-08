@@ -261,18 +261,35 @@ footer a {
 @media only screen and (max-width: 768px) {
     .hamburger-button {
         display: inline;
+        background-color: transparent;
+        border: none;
+        margin: 0 3vw;
+        padding: 0;
+        height: 64px;
     }
 
-    #main-nav {
+    .hamburger-button:hover {
+        cursor: pointer;
+    }
+
+    .hamburger-button img {
+        margin: auto;
+    }
+
+    .nav-list, #main-nav {
+        transition: .5s;
+    }
+
+    .nav-list {
+        position: absolute;
+        left: 0;
+        flex-direction: column;
+        justify-content: flex-start;
         width: 40vw;
         height: 100vh;
     }
 
-    .nav-list {
-        flex-direction: column;
-    }
-
-    .nav-item {
-        margin-bottom: 3rem;
+    .nav-list, .nav-item {
+        margin-top: 3rem;
     }
 }
