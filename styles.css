@@ -57,15 +57,12 @@ header {
     font-weight: bold;
 }
 
-button {
+.contact-button {
     width: 8rem;
     padding: .75rem;
     border: 2px solid var(--primary-color);
     background-color: transparent;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
-.contact-button {
     overflow: hidden;
     cursor: pointer;
     color: var(--primary-color);
@@ -105,6 +102,10 @@ button {
     width: 100vw;
     background-color: var(--primary-color);
     z-index: 99;
+}
+
+.hamburger-button {
+    display: none;
 }
 
 .nav-list {
@@ -194,35 +195,35 @@ section h1 {
 }
 
 .contact-item:hover {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 4px;
     transition: .2s;
-    /*animation: pulse 1s ease-in-out infinite;*/
-    animation: shrink .1s ease-out 1;
+    animation: shrink .1s ease-in-out 1, selected 1s infinite;
 }
 
-@keyframes shrink {
+@keyframes selected {
     0% {
-        transform: scale(1);
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
     }
 
     50% {
-        transform: scale(.9);
+        outline: 1px solid var(--primary-color);
+        outline-offset: 8px;
     }
 
 
     100% {
-        transform: scale(1);
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
     }
 }
 
-@keyframes pulse{
+@keyframes shrink{
     0% {
         transform: scale(1);
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(.95);
     }
 
 
@@ -255,4 +256,23 @@ footer a {
     color: var(--background-color);
     display: block;
     margin: 0.25em 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger-button {
+        display: inline;
+    }
+
+    #main-nav {
+        width: 40vw;
+        height: 100vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin-bottom: 3rem;
+    }
 }
