@@ -102,6 +102,7 @@ header {
     width: 100vw;
     background-color: var(--primary-color);
     z-index: 99;
+    height: 51px;
 }
 
 .hamburger-button {
@@ -126,9 +127,11 @@ header {
 }
 
 .nav-item a:hover {
-    background-color: var(--background-color);
+    /*background-color: var(--background-color);
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 500;*/
+    border-bottom: 4px solid var(--background-color);
+    padding-bottom: calc(1rem - 4px);
     transition: .3s;
 }
 
@@ -239,7 +242,6 @@ section h1 {
 }
 
 footer {
-    position: static;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
@@ -259,6 +261,18 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
+    header, .top-sections-container {
+        padding: 1rem;
+    }
+
+    .page-container {
+        margin: 1vw;
+    }
+
+    #main-nav {
+        height: 69px;
+    }
+
     .hamburger-button {
         display: inline;
         background-color: transparent;
@@ -276,20 +290,51 @@ footer a {
         margin: auto;
     }
 
-    .nav-list, #main-nav {
-        transition: .5s;
-    }
-
     .nav-list {
-        position: absolute;
-        left: 0;
+        position: fixed;
+        left: -50vw;
         flex-direction: column;
         justify-content: flex-start;
         width: 40vw;
         height: 100vh;
+        transition: .5s
     }
 
     .nav-list, .nav-item {
         margin-top: 3rem;
+    }
+
+    .nav-item {
+        display: flex;
+    }
+
+    .nav-item a {
+        width: 100%;
+    }
+
+    .title-container {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact-button {
+        position: relative;
+        left: calc(50% - 66px);
+    }
+
+    .decorative-tag {
+        position: fixed;
+        top: 13px;
+        right: 3vw;
+        color: var(--background-color);
+        z-index: 100;
+    }
+
+    .top-sections-container {
+        flex-direction: column;
+    }
+
+    .aboutme-section {
+        margin-right: 0;
     }
 }
