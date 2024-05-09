@@ -11,7 +11,7 @@ body {
     color: var(--primary-color);
     margin: 0;
     display: grid;
-    height: 100vh;
+    height: 100%;
     grid-template-rows: 1fr auto;
 }
 
@@ -199,7 +199,7 @@ section h1 {
 
 .contact-item:hover {
     transition: .2s;
-    animation: shrink .1s ease-in-out 1, selected 1s infinite;
+    animation: shrink .2s ease-out 1, selected 1s infinite;
 }
 
 @keyframes selected {

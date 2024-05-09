@@ -11,18 +11,30 @@ if (window.innerWidth > 768 && isSidebarToggled == 1) {
 function toggleSidebar() {
     if (isSidebarToggled == 0) {
         sidebar.style.left = 0;
+
         nav.style.width = '40vw';
         nav.style.height = '100vh';
-        document.body.style.backdropFilter = 'brightness(60%)';
         nav.style.transition = '.5s';
+        nav.style.marginTop = window.scrollY + 'px';
+
+        document.body.style.backdropFilter = 'brightness(60%)';
+        document.body.style.overflowY = 'hidden';
+
         decor.style.visibility = 'hidden';
+
         isSidebarToggled = 1;
     } else {
         sidebar.style.left = '-50vw';
+
         nav.style.width = '100vw';
-        document.body.style.backdropFilter = 'brightness(100%)'
         nav.style.height = '69px';
+        nav.style.marginTop = 0;
+
+        document.body.style.backdropFilter = 'brightness(100%)'
+        document.body.style.overflowY = 'scroll';
+
         decor.style.visibility = 'visible';
+
         isSidebarToggled = 0;
     }
 }
