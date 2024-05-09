@@ -306,20 +306,23 @@ footer a {
 
     .nav-item {
         display: flex;
+        box-sizing: border-box;
+        height: 5vh;
     }
 
     .nav-item a {
         width: 100%;
     }
 
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .title-container {
         text-align: center;
         justify-content: center;
-    }
-
-    .contact-button {
-        position: relative;
-        left: calc(50% - 66px);
     }
 
     .decorative-tag {

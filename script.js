@@ -29,6 +29,7 @@ function toggleSidebar() {
         nav.style.width = '100vw';
         nav.style.height = '69px';
         nav.style.marginTop = 0;
+        nav.style.top = 0;
 
         document.body.style.backdropFilter = 'brightness(100%)'
         document.body.style.overflowY = 'scroll';
