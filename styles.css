@@ -12,7 +12,7 @@ body {
     margin: 0;
     display: grid;
     height: 100%;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr auto auto;
 }
 
 ul {
@@ -242,7 +242,7 @@ section h1 {
 }
 
 footer {
-    bottom: 0;
+
     width: 100%;
     box-sizing: border-box;
     background-color: var(--primary-color);
