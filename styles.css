@@ -113,6 +113,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    background-color: var(--primary-color);
 }
 
 .nav-item {
@@ -297,17 +298,15 @@ footer a {
         justify-content: flex-start;
         width: 40vw;
         height: 100vh;
-        transition: .5s
-    }
-
-    .nav-list, .nav-item {
-        margin-top: 3rem;
+        transition: .5s;
+        margin: 0;
     }
 
     .nav-item {
         display: flex;
         box-sizing: border-box;
         height: 5vh;
+        margin-top: 3rem;
     }
 
     .nav-item a {
