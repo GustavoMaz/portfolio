@@ -25,23 +25,14 @@ function toggleSidebar() {
         isSidebarToggled = 1;
     } else {
         sidebar.style.left = '-50vw';
-        sidebar.style.display = 'none';
 
-        nav.style.top = window.scrollY + 'px';
         nav.style.width = '100vw';
         nav.style.height = '69px';
         nav.style.marginTop = 0;
-        nav.style.position = 'fixed';
         
-        document.body.style.backdropFilter = 'brightness(100%)'
-        document.body.style.overflowY = 'scroll';
-
+        document.body.style.backdropFilter = 'none'
+        
         decor.style.visibility = 'visible';
-
-        //Recarrega a página após meio segundo (duração da animação)
-        setTimeout(function() {
-            location.reload();
-        }, 500);
 
         isSidebarToggled = 0;
     }
