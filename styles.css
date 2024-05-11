@@ -6,13 +6,14 @@
     --background-color: white;
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: var(--primary-color);
-    margin: 0;
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr auto auto;
+    margin: 0;  
 }
 
 ul {
@@ -24,8 +25,9 @@ li {
 }
 
 .center {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-container {
@@ -129,11 +131,25 @@ header {
 
 .nav-item a:hover {
     /*background-color: var(--background-color);
-    color: var(--primary-color);
-    font-weight: 500;*/
-    border-bottom: 4px solid var(--background-color);
+    color: var(--primary-color);*/
+    font-weight: 500;
+    animation: underline .3s 1 forwards;
     padding-bottom: calc(1rem - 4px);
     transition: .3s;
+}
+
+@keyframes underline{
+    0%{
+        border-bottom: none;
+    }
+
+    50% {
+        border-bottom: 8px solid var(--background-color);
+    }
+
+    100% { 
+        border-bottom: 4px solid var(--background-color);
+    }
 }
 
 section {
@@ -243,7 +259,6 @@ section h1 {
 }
 
 footer {
-
     width: 100%;
     box-sizing: border-box;
     background-color: var(--primary-color);
@@ -313,6 +328,12 @@ footer a {
         width: 100%;
     }
 
+    .nav-item a:hover {
+        border-bottom: 4px solid var(--background-color);
+        transition: .3s;
+        animation: none;
+    }
+
     header {
         display: flex;
         flex-direction: column;
@@ -338,5 +359,18 @@ footer a {
 
     .aboutme-section {
         margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-img {
+        object-fit: contain;
+        width: 94vw;
+        height: calc(94vw / 1.77);
     }
 }

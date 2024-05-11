@@ -3,11 +3,7 @@ var isSidebarToggled = 0;
 let sidebar = document.getElementById('sidebar');
 let nav = document.getElementById('main-nav');
 let decor = document.querySelector('.decorative-tag');
-let page = document.querySelector('.page-container');
-
-if (window.innerWidth > 768 && isSidebarToggled == 1) {
-    toggleSidebar()
-}
+let bodyContainer = document.getElementById('body-container');
 
 function toggleSidebar() {
     if (isSidebarToggled == 0) {
@@ -19,7 +15,7 @@ function toggleSidebar() {
         document.body.style.backdropFilter = 'brightness(60%)';
         document.body.style.overflowY = 'hidden';
 
-        page.addEventListener('click', toggleSidebar);
+        bodyContainer.addEventListener('click', toggleSidebar);
 
         isSidebarToggled = 1;
     } else {
@@ -31,7 +27,7 @@ function toggleSidebar() {
         document.body.style.backdropFilter = 'none';
         document.body.style.overflowY = 'scroll';
 
-        page.removeEventListener('click', toggleSidebar);
+        bodyContainer.removeEventListener('click', toggleSidebar);
 
         isSidebarToggled = 0;
     }
