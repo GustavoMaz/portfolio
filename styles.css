@@ -59,6 +59,10 @@ header {
     font-weight: bold;
 }
 
+nav .decorative-tag {
+    display: none;
+}
+
 .contact-button {
     width: 8rem;
     padding: .75rem;
@@ -351,7 +355,8 @@ footer a {
         display: none;
     }
 
-    .decorative-tag:first-of-type {
+    nav .decorative-tag {
+        display: block;
         position: fixed;
         top: 13px;
         right: 3vw;
