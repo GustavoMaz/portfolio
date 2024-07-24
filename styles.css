@@ -3,7 +3,15 @@
 
 :root {
     --primary-color: #0B1215;
+    --primary-text: #0B1215;
+    --secondary-text: hsl(198, 20%, 20%);
     --background-color: white;
+    --xxs: 0.25rem;
+    --xs: 0.5rem;
+    --s: 1rem;
+    --m: 1.75rem;
+    --l: 3.75rem;
+    --xl: 6.25rem;
 }
 
 html, body {
@@ -12,7 +20,7 @@ html, body {
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: var(--primary-color);
+    color: var(--primary-text);
     margin: 0;  
 }
 
@@ -65,14 +73,13 @@ nav .decorative-tag {
 
 .contact-button {
     width: 8rem;
-    padding: .75rem;
+    padding: var(--s);
     border: 2px solid var(--primary-color);
     background-color: transparent;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     overflow: hidden;
     cursor: pointer;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--primary-text);
     position: relative;
     z-index: 1;
     margin-top: 2rem;
@@ -130,7 +137,7 @@ nav .decorative-tag {
     white-space: nowrap;
     color: var(--background-color);
     text-decoration: none;
-    padding: 1rem;
+    padding: var(--s);
 }
 
 .nav-item a:hover {
@@ -157,7 +164,7 @@ nav .decorative-tag {
 }
 
 section {
-    margin-bottom: 4rem;
+    margin-bottom: var(--l);
 }
 
 section h1 {
@@ -165,20 +172,20 @@ section h1 {
 }
 
 .top-sections-container {
-    padding: 0 4rem;
+    padding: 0 var(--l);
     display: flex;
     justify-content: space-between;
 }
 
 .aboutme-section {
-    margin-right: 4rem;
+    margin-right: var(--l);
     max-width: 768px;
 }
 
 .icon-list {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 2rem;
+    gap: var(--m);
     justify-content: center;
 }
 
@@ -188,6 +195,7 @@ section h1 {
     flex-wrap: nowrap;
     align-items: center;
     text-align: center;
+    color: var(--secondary-text);
 }
 
 .projects-section {
@@ -204,7 +212,7 @@ section h1 {
     min-width: 300px;
     /*height: 168px;*/
     flex-grow: 1;
-    margin: 5px;
+    margin: var(--xxs);
     background-color: gray;
     text-align: center;
     aspect-ratio: 16 / 9;
@@ -212,7 +220,7 @@ section h1 {
 
 .contact-item {
     background-color: var(--primary-color);
-    padding: 16px;
+    padding: var(--s);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -267,7 +275,8 @@ footer {
     width: 100%;
     box-sizing: border-box;
     background-color: var(--primary-color);
-    padding: 4rem 2vw;
+    padding: var(--l) 2vw;
+    color: var(--background-color);
 }
 
 footer h2 {
@@ -275,10 +284,17 @@ footer h2 {
     color: var(--background-color);
 }
 
+footer li {
+    margin-bottom: var(--s);
+}
+
+footer ul {
+    margin-bottom: var(--l);
+}
+
 footer a {
     color: var(--background-color);
-    display: block;
-    margin: 0.25em 0;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -322,12 +338,12 @@ footer a {
         display: flex;
         box-sizing: border-box;
         height: 5vh;
-        margin-top: 3rem;
+        margin-top: var(--l);
     }
 
     .nav-item a {
         width: 100%;
-        font-size: 14px;
+        font-size: 1.14285rem;
     }
 
     .nav-item a:hover {
@@ -343,7 +359,7 @@ footer a {
     }
 
     header, .top-sections-container {
-        padding: 1rem;
+        padding: var(--s);
     }
 
     .title-container {
@@ -389,7 +405,7 @@ footer a {
 
     .project-img {
         width: 95%;
-        margin: 5px auto;
+        margin: var(--xxs) auto;
         box-sizing: content-box;
     }
 }
