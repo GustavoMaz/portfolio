@@ -22,6 +22,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.25rem;
+}
+
 html, body {
   height: 100vh;
 }
@@ -112,11 +117,11 @@ nav .decorative-tag {
 #main-nav {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
   background-color: var(--primary-color);
   z-index: 99;
-  height: 51px;
-  padding: 1rem 2rem;
+  /*padding: 0 1rem;*/
 }
 
 .hamburger-button {
@@ -129,26 +134,29 @@ nav .decorative-tag {
   justify-content: flex-end;
   background-color: var(--primary-color);
   height: 100%;
+  /*gap: 2vw;*/
 }
 
 .nav-item {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item a {
   white-space: nowrap;
   color: var(--background-color);
   text-decoration: none;
-  padding: 3rem 1rem;
+  padding: 1.5rem 2rem;
   transition: .3s;
 }
 
+
 .nav-item a:hover {
-  /*background-color: var(--background-color);
-  color: var(--primary-color);*/
-  font-weight: 500;
-  animation: underline .3s 1 forwards;
-  padding-bottom: calc(3rem - 4px);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: .05em;
   transition: .3s;
 }
 
@@ -165,6 +173,7 @@ nav .decorative-tag {
     border-bottom: 4px solid var(--background-color);
   }
 }
+
 
 section {
   margin: 0 auto;
@@ -262,43 +271,12 @@ a:has(> .project):hover .project-img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .3s;
+
 }
 
 .contact-item:hover {
-  transition: .2s;
-  animation: shrink .2s ease-out 1, selected 1s infinite;
-}
-
-@keyframes selected {
-  0% {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-
-  50% {
-    outline: 1px solid var(--primary-color);
-    outline-offset: 8px;
-  }
-
-
-  100% {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-}
-
-@keyframes shrink {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(.95);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+  transform: scale(1.1);
 }
 
 .contact-item img {
@@ -371,31 +349,25 @@ footer a:hover {
 
   .nav-list {
     position: fixed;
-    left: -50vw;
+    left: -70vw;
     flex-direction: column;
     justify-content: flex-start;
-    width: 40vw;
+    width: 60vw;
     height: 100vh;
     transition: .5s;
-    margin: 0;
+    position: relative;
+    top: 1px;
   }
 
   .nav-item {
     display: flex;
     box-sizing: border-box;
-    height: 5vh;
-    margin-top: var(--m-bottom-l);
+    height: fit-content;
   }
 
   .nav-item a {
     width: 100%;
     font-size: 1.14285rem;
-  }
-
-  .nav-item a:hover {
-    border-bottom: 4px solid var(--background-color);
-    transition: .3s;
-    animation: none;
   }
 
   header {

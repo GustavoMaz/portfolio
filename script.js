@@ -1,12 +1,12 @@
 document.getElementById('hamburger-button').addEventListener('click', toggleSidebar);
-var isSidebarToggled = 0;
-let sidebar = document.getElementById('sidebar');
-let nav = document.getElementById('main-nav');
-let bodyContainer = document.getElementById('body-container');
-let navLinks = document.querySelectorAll('.nav-item a');
+let isSidebarToggled = 0;
+const sidebar = document.getElementById('sidebar');
+// let nav = document.getElementById('main-nav');
+const bodyContainer = document.getElementById('body-container');
+// let navLinks = document.querySelectorAll('.nav-item a');
 
 function toggleSidebar() {
-  if (isSidebarToggled == 0) {
+  if (isSidebarToggled == false) {
     sidebar.style.left = 0;
 
     bodyContainer.style.backdropFilter = 'brightness(60%)';
@@ -18,15 +18,21 @@ function toggleSidebar() {
         navLinks[i].addEventListener('click', toggleSidebar);
     }
 
-    isSidebarToggled = 1;
+    isSidebarToggled = true;
   } else {
-    sidebar.style.left = '-50vw';
+    sidebar.style.left = '-70vw';
 
     bodyContainer.style.backdropFilter = 'none';
     document.body.style.overflowY = 'scroll';
 
     bodyContainer.removeEventListener('click', toggleSidebar);
 
-    isSidebarToggled = 0;
+    isSidebarToggled = false;
   }
 }
+
+window.addEventListener('rezise', () => {
+  if (window.innerWidth > 769) {
+    toggleSidebar();
+  }
+});
