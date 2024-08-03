@@ -131,7 +131,7 @@ nav .decorative-tag {
 .nav-list {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: var(--primary-color);
   height: 100%;
   /*gap: 2vw;*/
@@ -221,6 +221,7 @@ h2 {
 
 a:has(> .project) {
   color: var(--primary-text);
+  background-color: var(--background-color);
   text-decoration: none;
 }
 
@@ -327,7 +328,7 @@ footer a:hover {
   }
 
   #main-nav {
-    height: 69px;
+    height: 67px;
   }
 
   .hamburger-button {
@@ -356,7 +357,17 @@ footer a:hover {
     height: 100vh;
     transition: .5s;
     position: relative;
-    top: 1px;
+    top: -1px;
+  }
+  
+  .nav-list.active {
+    left: 0;
+  }
+
+  #main-nav:has(> .nav-list.active) + #body-content {
+    background-color: var(--background-color);
+    filter: brightness(60%);
+
   }
 
   .nav-item {
@@ -389,7 +400,7 @@ footer a:hover {
   nav .decorative-tag {
     display: block;
     position: fixed;
-    top: 13px;
+    top: 0.875rem;
     right: 3vw;
     color: var(--background-color);
     z-index: 100;
