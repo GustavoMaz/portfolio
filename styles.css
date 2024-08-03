@@ -213,7 +213,7 @@ h2 {
 .project .know-more::before {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 1px;
   bottom: 0.75rem;
   left: 1rem;
   background-color: var(--secondary-text);
