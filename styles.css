@@ -160,21 +160,6 @@ nav .decorative-tag {
   transition: .3s;
 }
 
-@keyframes underline{
-  0%{
-    border-bottom: none;
-  }
-
-  50% {
-    border-bottom: 8px solid var(--background-color);
-  }
-
-  100% { 
-    border-bottom: 4px solid var(--background-color);
-  }
-}
-
-
 section {
   margin: 0 auto;
   margin-bottom: var(--m-bottom-xl);
@@ -210,30 +195,43 @@ h2 {
 }
 
 .project-list {
-  /*
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   column-gap: 1rem;
 }
 
-a:has(> .project) {
+.project a {
   color: var(--primary-text);
   background-color: var(--background-color);
   text-decoration: none;
 }
 
-a:has(> .project):hover .project-img {
+.project:hover .project-img {
   transform: scale(1.1);
 }
+
+.project .know-more::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0.75rem;
+  left: 1rem;
+  background-color: var(--secondary-text);
+  transition: .3s;
+  width: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.project:hover .know-more::before {
+  transition: .3s;
+  width: 1px;
+  transform: scaleX(88);
+}
+
 .project-item {
-  /*height: 168px;
-  flex-grow: 1;*/
   text-align: left;
   margin-bottom: var(--m-bottom-m);
-  /*border-radius: 16px;*/
   border: 1px solid var(--secondary-text-inverted);
   overflow: hidden;
 }
@@ -241,7 +239,6 @@ a:has(> .project):hover .project-img {
 .project-img {
   object-fit: cover;
   width: 100%;
-  /*border-radius: 16px 16px 0 0;*/
   transition: .3s ease;
 }
 
@@ -259,11 +256,13 @@ a:has(> .project):hover .project-img {
   margin-bottom: var(--m-bottom-xs);
 }
 
-.project-info p {
+.project-info > p{
   margin-bottom: var(--m-bottom-s);
 }
 
-.project-info span { text-align: right; display: block;}
+.project-info .know-more-wrapper { 
+  width: fit-content;
+}
 
 .contact-item {
   background-color: var(--primary-color);
@@ -367,7 +366,6 @@ footer a:hover {
   #main-nav:has(> .nav-list.active) + #body-content {
     background-color: var(--background-color);
     filter: brightness(60%);
-
   }
 
   .nav-item {
@@ -378,7 +376,6 @@ footer a:hover {
 
   .nav-item a {
     width: 100%;
-    font-size: 1.14285rem;
   }
 
   header {
@@ -406,27 +403,3 @@ footer a:hover {
     z-index: 100;
   }
 }
-
-/*
-@media only screen and (max-width: 650px) {
-  header {
-    padding: 0;
-  }
-
-  .project-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-item {
-    width: 100%;
-  }
-
-  .project-img {
-    width: 100%;
-    margin: 0.25rem auto;
-    box-sizing: border-box;
-  }
-  
-}
-  */
