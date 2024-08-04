@@ -207,10 +207,11 @@ h2 {
 }
 
 .project:hover .project-img {
+  filter: brightness(100%);
   transform: scale(1.1);
 }
 
-.project .know-more::before {
+.project .view-project::before {
   content: "";
   position: absolute;
   height: 1px;
@@ -223,10 +224,10 @@ h2 {
   transform-origin: bottom left;
 }
 
-.project:hover .know-more::before {
+.project:hover .view-project::before {
   transition: .3s;
   width: 1px;
-  transform: scaleX(88);
+  transform: scaleX(140);
 }
 
 .project-item {
@@ -239,6 +240,7 @@ h2 {
 .project-img {
   object-fit: cover;
   width: 100%;
+  filter: brightness(60%);
   transition: .3s ease;
 }
 
@@ -246,6 +248,7 @@ h2 {
   padding: 0.75rem 1rem 1rem;
   color: var(--secondary-text);
   background-color: var(--background-color);
+  height: 100%;
   min-height: 100%;
   position: relative;
   top: -0.25rem;
@@ -260,7 +263,7 @@ h2 {
   margin-bottom: var(--m-bottom-s);
 }
 
-.project-info .know-more-wrapper { 
+.project-info .view-project-wrapper { 
   width: fit-content;
 }
 
