@@ -207,7 +207,7 @@ h2 {
 }
 
 .project:hover .project-img {
-  filter: brightness(100%);
+  filter: brightness(90%);
   transform: scale(1.1);
 }
 
@@ -240,8 +240,9 @@ h2 {
 .project-img {
   object-fit: cover;
   width: 100%;
-  filter: brightness(60%);
+  filter: brightness(40%);
   transition: .3s ease;
+  aspect-ratio: 16 / 9;
 }
 
 .project-info {
@@ -358,8 +359,8 @@ footer a:hover {
     width: 60vw;
     height: 100vh;
     transition: .5s;
-    position: relative;
-    top: -1px;
+    position: absolute;
+    top: 67px;
   }
   
   .nav-list.active {
